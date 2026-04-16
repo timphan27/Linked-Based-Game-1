@@ -1,58 +1,171 @@
-{
-    "Title": "Campus Life on the West Side",
-    "Credits": "Created by Adam Smith (amsmith@ucsc.edu).",
-    "InitialLocation": "Kresge",
-    "Locations": {
-        "Kresge": {
-            "Body": "This is Kresge College, lots of nice trees.",
-            "Choices": [
-                {
-                    "Text": "South",
-                    "Target": "Porter"
-                }
-            ]
-        },
-        "Porter": {
-            "Body": "This is Porter College, the trees are nice here too.",
-            "Choices": [
-                {
-                    "Text": "North",
-                    "Target": "Kresge"
-                },
-                {
-                    "Text": "South",
-                    "Target": "Rachel Carson"
-                }
-            ]
-        },
-        "Rachel Carson": {
-            "Body": "Rachel Carson College, more sun and fewer trees.",
-            "Choices": [
-                {
-                    "Text": "North",
-                    "Target": "Porter"
-                },
-                {
-                    "Text": "South",
-                    "Target": "Oakes"
-                }
-            ]
-        },
-        "Oakes": {
-            "Body": "Oakes College, even the buildings have tree bark on them.",
-            "Choices": [
-                {
-                    "Text": "North",
-                    "Target": "Rachel Carson"
-                },
-                {
-                    "Text": "South",
-                    "Target": "Beyond"
-                }
-            ]
-        },
-        "Beyond": {
-            "Body": "Grass, don't forget to check for ticks!"
-        }
-    }
+    {
+        "Title": "Campus Life on the West Side",
+        "Credits": "Created by Adam Smith (amsmith@ucsc.edu).",
+        "InitialLocation": "Foyer",
+        "Locations": {
+            "Foyer": {
+                "Body": "This Foyer",
+                "Choices": [
+                    {
+                        "Text": "Go to Garden",
+                        "Target": "Garden"
+                    },
+                    {
+                        "Text": "Go to Dining Room",  
+                        "Target": "Dining Room"
+                    },
+                    {
+                        "Text": "Bedroom",
+                        "Target":"Bedroom"
+                    }
+                ]
+            },
+            "Garden": {
+                "Body": "This is Porter College, the trees are nice here too.",
+                "RequiresKey": true,
+                "Choices": [
+                    {
+                        "Text": "Go Back to Foyer", 
+                        "Target": "Foyer"
+                    },
+                    {
+                        "Text": "Go to Greenhouse",
+                        "Target": "Green House"
+                    },
+
+                    {
+                        "Text": "Go to Fountain.",
+                        "Target": "Fountain"
+                    },
+                    {
+                        "Text": "You notice a key on the ground. Grab it.",
+                        "Event": "getKey"
+                    }
+                ]
+            },
+            "Green House": {
+                "Body": "Rachel Carson College, more sun and fewer trees.",
+                "Choices": [
+                    {
+                        "Text": "Go back to Garden",
+                        "Target": "Garden"
+                    }
+                
+                ]
+            },
+            "Fountain": {
+                "Body": "Oakes College, even the buildings have tree bark on them.",
+                "Choices": [
+                    {
+                        "Text": "Go back to Garden",
+                        "Target": "Garden"
+                    }
+                
+                ]
+            },
+            "Dining Room": {
+                "Body": "Grass, don't forget to check for ticks!",
+                "Choices": [
+                    {
+                        "Text": "Go back to Foyer",
+                        "Target": "Foyer"
+
+                    },
+                    {
+                        "Text": "Basement text",
+                        "Target": "Basement"
+                    },
+                    {
+                        "Text":"Library text",
+                        "Target":"Library"
+                    },
+                    {
+                        "Text": "You see a music box",
+                        "Target": "Dining Room",
+                        "Event": "musicBox"
+                    }
+                ]
+            },
+            "Bed Room": {
+                "Body": "Grass, don't forget to check for ticks!",
+                "Choices": [
+                    {
+                        "Text": "attic",
+                        "Target": "Attic"
+                    },
+                     {
+                        "Text": "Go back to Foyer",
+                        "Target": "Foyer"
+                    }
+                ]
+            },
+
+            "Attic": {
+                "Body": "Grass, don't forget to check for ticks!",
+                "Choices": [
+                    {
+                        "Text": "Go Back to Bedroom",
+                        "Target": "Bedroom"
+                    }
+                ]
+            },
+            "Basement": {
+                "Body": "Grass, don't forget to check for ticks!",
+                "Choices": [
+                    {
+                        "Text": "Go back to Dining Room",
+                        "Target": "Dining Room"
+                    }
+                ]
+            },
+            "Library": {
+                "Body": "Grass, don't forget to check for ticks!",
+                "Choices": [
+                    {
+                        "Text": "Go back to Dining Room",
+                        "Target": "Dining Room"
+                    },
+                    {
+                        "Text": "go to Book Archive",
+                        "Target": "Archive"
+                    },
+                    {
+                        "Text": "Secret Room",
+                        "Target": "Secret Room" 
+
+                    }
+                
+                ]
+            },
+
+            "Secret Room": {
+                "Body": "Grass, don't forget to check for ticks!",
+                "RequiresKey": true,
+                "Choices": [
+                    {
+                        "Text": "Go back to Library",
+                        "Target": "Library" 
+                    },
+                    {
+                        "Text": "The room goes black. ",
+                        "Target": "End"
+                    }
+                
+                
+                ]
+            },
+            "Archive": {
+                "Body": "Grass, don't forget to check for ticks!",
+                "Choices": [
+                    {
+                        "Text": "Go back to Library",
+                        "Target": "Archive"
+                    }
+                ]
+            },
+            "End": {
+                "Body": "END"
+           }
+            
+     }
 }
