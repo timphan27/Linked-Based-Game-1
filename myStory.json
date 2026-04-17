@@ -11,12 +11,12 @@
                         "Target": "Garden"
                     },
                     {
-                        "Text": "Go to Dining Room",  
+                        "Text": "Go to Dining Room",
                         "Target": "Dining Room"
                     },
                     {
                         "Text": "Bedroom",
-                        "Target":"Bedroom"
+                        "Target": "Bedroom"
                     }
                 ]
             },
@@ -24,16 +24,15 @@
                 "Body": "With statues shattered with age and plants blocking the paths, an overgrown garden is silent and motionless. The sound of somebody hidden just out of sight is created by the wind blowing through the woods.",
                 "Choices": [
                     {
-                        "Text": "Go Back to Foyer", 
+                        "Text": "Go Back to Foyer",
                         "Target": "Foyer"
                     },
                     {
                         "Text": "Go to Greenhouse",
                         "Target": "Green House"
                     },
-
                     {
-                        "Text": "Go to Fountain.",
+                        "Text": "Go to Fountain",
                         "Target": "Fountain"
                     },
                     {
@@ -50,7 +49,6 @@
                         "Text": "Go back to Garden",
                         "Target": "Garden"
                     }
-                
                 ]
             },
             "Fountain": {
@@ -60,7 +58,6 @@
                         "Text": "Go back to Garden",
                         "Target": "Garden"
                     }
-                
                 ]
             },
             "Dining Room": {
@@ -69,20 +66,14 @@
                     {
                         "Text": "Go back to Foyer",
                         "Target": "Foyer"
-
                     },
                     {
                         "Text": "Go to Basement",
                         "Target": "Basement"
                     },
                     {
-                        "Text":"Go to Library",
-                        "Target":"Library"
-                    },
-                    {
-                        "Text": "You see a music box. Should you interact with it?",
-                        "Target": "Dining Room",
-                        "Event": "musicBox"
+                        "Text": "Go to Library",
+                        "Target": "Library"
                     }
                 ]
             },
@@ -93,13 +84,17 @@
                         "Text": "Go to Attic",
                         "Target": "Attic"
                     },
-                     {
+                    {
                         "Text": "Go back to Foyer",
                         "Target": "Foyer"
+                    },
+                    {
+                        "Text": "You see a music box. Should you interact with it?",
+                        "Target": "Bedroom",
+                        "Event": "musicBox"
                     }
                 ]
             },
-
             "Attic": {
                 "Body": "A dusty attic full with broken furniture and rusty cartons. Even when everything appears to be motionless, you can hear faint sounds up here.",
                 "Choices": [
@@ -126,32 +121,27 @@
                         "Target": "Dining Room"
                     },
                     {
-                        "Text": "go to Book Archive",
+                        "Text": "Go to Book Archive",
                         "Target": "Archive"
                     },
                     {
                         "Text": "Secret Room",
-                        "Target": "Secret Room" 
-
+                        "Target": "Secret Room"
                     }
-                
                 ]
             },
-
             "Secret Room": {
                 "Body": "A secret room with a hefty door that requires a special key to open. The atmosphere within seems different, like if something significant is about to come to an end.",
                 "RequiresKey": true,
                 "Choices": [
                     {
                         "Text": "Go back to Library",
-                        "Target": "Library" 
+                        "Target": "Library"
                     },
                     {
                         "Text": "The room goes black. You close your eyes.",
                         "Target": "End"
                     }
-                
-                
                 ]
             },
             "Archive": {
@@ -159,13 +149,12 @@
                 "Choices": [
                     {
                         "Text": "Go back to Library",
-                        "Target": "Archive"
+                        "Target": "Library"
                     }
                 ]
             },
             "End": {
-                "Body": "END"
-           }
-            
-     }
-}
+                "Body": "THE END"
+            }
+        }
+    }
