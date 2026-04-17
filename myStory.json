@@ -1,10 +1,10 @@
     {
-        "Title": "Campus Life on the West Side",
-        "Credits": "Created by Adam Smith (amsmith@ucsc.edu).",
+        "Title": "The Mansion",
+        "Credits": "Credits: Tim Phan",
         "InitialLocation": "Foyer",
         "Locations": {
             "Foyer": {
-                "Body": "This Foyer",
+                "Body": "With marble flooring that reverberate with each step, a spacious lobby opens up into darkness. The portraits on the walls appear to be observing you, while the antique chandelier overhead flickers.",
                 "Choices": [
                     {
                         "Text": "Go to Garden",
@@ -21,8 +21,7 @@
                 ]
             },
             "Garden": {
-                "Body": "This is Porter College, the trees are nice here too.",
-                "RequiresKey": true,
+                "Body": "With statues shattered with age and plants blocking the paths, an overgrown garden is silent and motionless. The sound of somebody hidden just out of sight is created by the wind blowing through the woods.",
                 "Choices": [
                     {
                         "Text": "Go Back to Foyer", 
@@ -39,12 +38,13 @@
                     },
                     {
                         "Text": "You notice a key on the ground. Grab it.",
-                        "Event": "getKey"
+                        "Event": "getKey",
+                        "Target": "Garden"
                     }
                 ]
             },
             "Green House": {
-                "Body": "Rachel Carson College, more sun and fewer trees.",
+                "Body": "A shattered greenhouse is filled with overgrown and dead plants, and its glass is fractured, allowing chilly air to enter.",
                 "Choices": [
                     {
                         "Text": "Go back to Garden",
@@ -54,7 +54,7 @@
                 ]
             },
             "Fountain": {
-                "Body": "Oakes College, even the buildings have tree bark on them.",
+                "Body": "In the middle is an ancient fountain with quiet, dark water. Just beneath the surface, something moves, but upon closer inspection, it disappears.",
                 "Choices": [
                     {
                         "Text": "Go back to Garden",
@@ -64,7 +64,7 @@
                 ]
             },
             "Dining Room": {
-                "Body": "Grass, don't forget to check for ticks!",
+                "Body": "Dust covers a long dining table, and the chairs are pulled out as if someone had left in a hurry. The meal has long since gone bad, but the plates are still in place.",
                 "Choices": [
                     {
                         "Text": "Go back to Foyer",
@@ -72,25 +72,25 @@
 
                     },
                     {
-                        "Text": "Basement text",
+                        "Text": "Go to Basement",
                         "Target": "Basement"
                     },
                     {
-                        "Text":"Library text",
+                        "Text":"Go to Library",
                         "Target":"Library"
                     },
                     {
-                        "Text": "You see a music box",
+                        "Text": "You see a music box. Should you interact with it?",
                         "Target": "Dining Room",
                         "Event": "musicBox"
                     }
                 ]
             },
-            "Bed Room": {
-                "Body": "Grass, don't forget to check for ticks!",
+            "Bedroom": {
+                "Body": "A bedroom remains unaltered, with a well-made but dusty bed. ",
                 "Choices": [
                     {
-                        "Text": "attic",
+                        "Text": "Go to Attic",
                         "Target": "Attic"
                     },
                      {
@@ -101,7 +101,7 @@
             },
 
             "Attic": {
-                "Body": "Grass, don't forget to check for ticks!",
+                "Body": "A dusty attic full with broken furniture and rusty cartons. Even when everything appears to be motionless, you can hear faint sounds up here.",
                 "Choices": [
                     {
                         "Text": "Go Back to Bedroom",
@@ -110,7 +110,7 @@
                 ]
             },
             "Basement": {
-                "Body": "Grass, don't forget to check for ticks!",
+                "Body": "There's water leaking someplace in the distance, and the basement is dark and smells old and damp. ",
                 "Choices": [
                     {
                         "Text": "Go back to Dining Room",
@@ -119,7 +119,7 @@
                 ]
             },
             "Library": {
-                "Body": "Grass, don't forget to check for ticks!",
+                "Body": "A peaceful library with dusty bookshelves. Even though nobody should be here, some seem out of place, as if they were recently transported.",
                 "Choices": [
                     {
                         "Text": "Go back to Dining Room",
@@ -139,7 +139,7 @@
             },
 
             "Secret Room": {
-                "Body": "Grass, don't forget to check for ticks!",
+                "Body": "A secret room with a hefty door that requires a special key to open. The atmosphere within seems different, like if something significant is about to come to an end.",
                 "RequiresKey": true,
                 "Choices": [
                     {
@@ -147,7 +147,7 @@
                         "Target": "Library" 
                     },
                     {
-                        "Text": "The room goes black. ",
+                        "Text": "The room goes black. You close your eyes.",
                         "Target": "End"
                     }
                 
@@ -155,7 +155,7 @@
                 ]
             },
             "Archive": {
-                "Body": "Grass, don't forget to check for ticks!",
+                "Body": "An archive room filled with outdated paperwork, files, and records that had been forgotten and piled unevenly.",
                 "Choices": [
                     {
                         "Text": "Go back to Library",
